@@ -1,7 +1,24 @@
 import { useEffect } from "react";
 import styles from "./Locofy.module.css";
+import { auth , googleProvider} from "../config/firebase";
+import { createUserWithEmailAndPassword,signInWithPopup, signOut } from "firebase/auth";
+import { useState } from "react";
 
 const Locofy = () => {
+  const signInWithGoogle = async () => {
+    try {
+    await signInWithPopup(auth,googleProvider);
+    } catch (err){
+      console.error(err);
+    }
+  };
+  const logOut = async () => {
+    try {
+    await signOut(auth);
+    } catch (err){
+      console.error(err);
+    }
+  }  
   useEffect(() => {
     const scrollAnimElements = document.querySelectorAll(
       "[data-animate-on-scroll]"
@@ -86,7 +103,7 @@ const Locofy = () => {
         <div className={styles.loginHeader}>
           Create Account/ Login into Account
         </div>
-        <button className={styles.signUpGoogleButton}>
+        <button className={styles.signUpGoogleButton} onClick={signInWithGoogle}>
           <img className={styles.googleIcon} alt="" src="/google-icon.svg" />
           <div className={styles.signUpWith}>Sign up with Google</div>
           <div className={styles.signUpButton} />
