@@ -110,8 +110,13 @@ const Locofy = () => {
         </button>
         <a className={styles.loginAnchor}>
           <span>{`Already a member? `}</span>
-          <span className={styles.login}>Login</span>
+          <span className={styles.login} onClick={signInWithGoogle}>Login</span>
         </a>
+        {/* <button className={styles.logOutButton} onClick={logOut}>
+          <img className={styles.googleIcon} alt="" src="/google-icon.svg" />
+          <div className={styles.signUpWith}>Log Out</div>
+          <div className={styles.signUpButton} />
+        </button> */}
       </div>
       <div className={styles.aboutCompany} data-animate-on-scroll>
         <div className={styles.companyNameHeader}>Motto</div>

@@ -142,9 +142,11 @@
   height: 17.74px;
 }
 .span {
-  color: var(--color-gray-200);
+  /* color: var(--color-gray-200); */
+  color: rgba(255, 255, 255, 0.5);
 }
 .terms {
+  cursor: pointer;
   font-weight: 500;
   color: var(--color-white);
 }
@@ -165,6 +167,7 @@
   font-size: var(--font-size-xl);
   font-weight: 600;
   width: 464px;
+  color: var(--color-white);
 }
 .googleIcon {
   position: absolute;
@@ -217,13 +220,25 @@
   width: 329px;
   height: 41px;
 }
+.logOutButton {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  position: absolute;
+  top: 166px;
+  left: 0;
+  width: 329px;
+  height: 41px;
+}
 .login {
+  cursor: pointer;
   color: var(--color-white);
 }
 .loginAnchor {
   text-decoration: none;
   position: absolute;
-  top: 134px;
+  top: 128px;
   left: 82px;
   font-weight: 500;
   display: inline-block;
@@ -249,6 +264,7 @@
   left: 1.69%;
   font-weight: 600;
   display: inline-block;
+  color: var(--color-white);
 }
 .comapnyLogoImage {
   position: absolute;
@@ -289,7 +305,8 @@
 .locofy {
   position: relative;
   border-radius: 4px;
-  background: linear-gradient(180deg, #00adb5 79.17%, #222831);
+  /* background: linear-gradient(180deg, #00adb5 79.17%, #222831); */
+  background: linear-gradient(180deg, #000e1e 79.17%, #263aac);
   box-shadow: 0 8px 10px -6px rgba(0, 0, 0, 0.25),
     0 10px 20px -5px rgba(0, 0, 0, 0.2);
   width: 100%;
@@ -297,6 +314,7 @@
   overflow: hidden;
   text-align: left;
   font-size: var(--font-size-sm);
-  color: var(--color-gray-100);
+  /* color: var(--color-gray-100); */
+  color: rgba(255, 255, 255, 0.5);
   font-family: var(--font-athiti);
 }
