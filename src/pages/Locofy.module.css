@@ -73,6 +73,7 @@
   position: absolute;
   top: 0;
   left: 17px;
+  /* left: 0px; */
   width: 530.83px;
   height: 773.83px;
   opacity: 0;
@@ -309,12 +310,69 @@
   background: linear-gradient(180deg, #000e1e 79.17%, #263aac);
   box-shadow: 0 8px 10px -6px rgba(0, 0, 0, 0.25),
     0 10px 20px -5px rgba(0, 0, 0, 0.2);
-  width: 100%;
-  height: 821px;
+  width: 100vw;
+  height: 100vh;
   overflow: hidden;
   text-align: left;
   font-size: var(--font-size-sm);
   /* color: var(--color-gray-100); */
   color: rgba(255, 255, 255, 0.5);
   font-family: var(--font-athiti);
+}
+
+/* Adding media query for mobile devices */
+@media screen and (max-width:450px) {
+  #maindivout{
+    width:100vw;
+  }
+
+  .aboutCompany {
+    left: 10px;
+  }
+
+  .loginSection {
+    left: 10px;
+  }
+
+  .image {
+    position: absolute;
+    /* top: 168px; */
+    top: 248px;
+    left: 0px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    width: 459px;
+    /* max-width: 306px; */
+    height: 374px;
+    /* height: auto; */
+    opacity: 0;
+  }
+
+  .cloudStorageImage,
+  .imageItem {
+    position: absolute;
+    top: 112.08px;
+    /* top: 222.08px; */
+    left: 26.58px;
+    /* width: 375.8px; */
+    width: 250px;
+    height: auto;
+    opacity: 0.7;
+  }
+
+  .cloudStorageImage {
+    top: 35px;
+    left: 10px;
+    /* width: 449px; */
+    width: 300px;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .imageChild {
+    top: 378px;
+    /* left: 561px; */
+    left: 0px;
+    width: 300px;
+    opacity: 0.7;
+  }
 }
